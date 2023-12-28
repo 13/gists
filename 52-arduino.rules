@@ -1,0 +1,22 @@
+# /etc/udev/rules.d/52-arduino.rules
+# gpasswd -a user uucp
+# udevadm control --reload
+# udevadm trigger
+#
+# Wemos D1 mini
+# 1a86:7523
+SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="arduino/d1mini" GROUP="uucp", MODE="0666"
+# 10c4:ea60
+SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", SYMLINK+="arduino/d1minipro" GROUP="uucp", MODE="0666"
+# 303a:80c2 WEMOS.CC LOLIN-S2-MINI
+# 303a:0002
+SUBSYSTEMS=="usb", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="303a", ATTRS{idProduct}=="80c2", SYMLINK+="arduino/wemoss2" GROUP="uucp", MODE="0666"
+SUBSYSTEMS=="usb", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="303a", ATTRS{idProduct}=="0002", SYMLINK+="arduino/wemoss2" GROUP="uucp", MODE="0666"
+# 0403:6001 Arduino Pro Mini
+# 1b4f:9206
+SUBSYSTEMS=="usb", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="arduino/promicro" GROUP="uucp", MODE="0666"
+SUBSYSTEMS=="usb", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="1b4f", ATTRS{idProduct}=="9206", SYMLINK+="arduino/promicro" GROUP="uucp", MODE="0666"
+# 2341:0043 Arduino SA Uno R3 (CDC ACM)
+# 2341:8036 Arduino SA Leonardo (CDC ACM, HID)
+SUBSYSTEMS=="usb", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0043", SYMLINK+="arduino/uno" GROUP="uucp", MODE="0666"
+SUBSYSTEMS=="usb", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="8036", SYMLINK+="arduino/promicro" GROUP="uucp", MODE="0666"
