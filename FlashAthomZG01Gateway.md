@@ -1,8 +1,8 @@
 # How to flash Athom ZG01 Zigbee Gateway
 
-Set switches to serial mode [^1]
-Connect DIO15 of RF-BM-2652P2 CC2652P2 to GND [^2]
-Flash with cc2538-bsl-utility the flashfile "CC1352P2_CC2652P_launchpad_coordinator_20230507.hex" [^3]
+- Set switches to serial mode [^1]
+- Connect DIO15 of RF-BM-2652P2 CC2652P2 to GND [^2]
+- Flash with cc2538-bsl-utility the flashfile "CC1352P2_CC2652P_launchpad_coordinator_20230507.hex" [^3]
 
 ```
 docker run --rm \
